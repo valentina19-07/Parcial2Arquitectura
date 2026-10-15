@@ -1,27 +1,32 @@
-# MfeProductos
+# mfe-productos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Microfrontend de productos (Angular 17, standalone) con Clean Architecture. Se integra al host mediante federation.
 
-## Development server
+- Puerto: **4201**
+- Consume: **ms-productos** (Node.js) en http://localhost:3001/api/productos
+- Expone: `./routes` (`MFE_ROUTES`)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Ejecución
 
-## Code scaffolding
+    npm install
+    npm start
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Pruebas y cobertura (>90%)
 
-## Build
+    ng test --no-watch --code-coverage --browsers=ChromeHeadless
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Capas
 
-## Running unit tests
+| Capa | Carpeta | Contenido |
+|---|---|---|
+| Dominio | `src/app/domain` | `Producto`, contrato `ProductoRepository` |
+| Aplicación | `src/app/application` | 3 casos de uso |
+| Infraestructura | `src/app/infrastructure` | `HttpProductoRepository` (HttpClient) |
+| Presentación | `src/app/presentation` | `ProductosPageComponent` |
+| Composición | `src/app/mfe.routes.ts` | enlaza contrato con implementación |
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Casos de uso
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. `ListarProductosUseCase`: lista todos los productos.
+2. `ObtenerProductoUseCase`: obtiene un producto por id.
+3. `CrearProductoUseCase`: crea un producto.
