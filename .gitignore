@@ -1,41 +1,9 @@
-# Node
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-.pnpm-debug.log*
-
-# Angular / Webpack
-.angular/
 dist/
-dist-ssr/
+.angular/
 coverage/
-
-# Java / Spring Boot / Maven
 target/
-*.class
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-hs_err_pid*
-replay_pid*
-.mvn/wrapper/maven-wrapper.jar
-
-# IDEs
 .idea/
-*.iml
 .vscode/
-*.sublime-project
-*.sublime-workspace
+*.log
 .DS_Store
-Thumbs.db
-
-# Environment variables
-.env
-.env.local
-.env.*.local
