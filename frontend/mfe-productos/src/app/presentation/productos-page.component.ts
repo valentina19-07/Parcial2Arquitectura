@@ -18,9 +18,9 @@ import { NuevoProducto, Producto } from '../domain/models/producto.model';
 
       <h3>Crear producto</h3>
       <form class='form' (ngSubmit)='guardar()'>
-        <input name='nombre' [(ngModel)]='nuevo.nombre' placeholder='Nombre' required />
-        <input name='precio' type='number' [(ngModel)]='nuevo.precio' placeholder='Precio' />
-        <input name='stock' type='number' [(ngModel)]='nuevo.stock' placeholder='Stock' />
+        <label>Nombre <input name='nombre' [(ngModel)]='nuevo.nombre' required /></label>
+        <label>Precio <input name='precio' type='number' [(ngModel)]='nuevo.precio' /></label>
+        <label>Stock <input name='stock' type='number' [(ngModel)]='nuevo.stock' /></label>
         <button type='submit'>Crear</button>
       </form>
 

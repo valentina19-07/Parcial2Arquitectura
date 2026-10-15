@@ -18,9 +18,9 @@ import { Cliente, NuevoCliente } from '../domain/models/cliente.model';
 
       <h3>Crear cliente</h3>
       <form class='form' (ngSubmit)='guardar()'>
-        <input name='nombre' [(ngModel)]='nuevo.nombre' placeholder='Nombre' required />
-        <input name='email' type='email' [(ngModel)]='nuevo.email' placeholder='Email' required />
-        <input name='ciudad' [(ngModel)]='nuevo.ciudad' placeholder='Ciudad' required />
+        <label>Nombre <input name='nombre' [(ngModel)]='nuevo.nombre' required /></label>
+        <label>Email <input name='email' type='email' [(ngModel)]='nuevo.email' required /></label>
+        <label>Ciudad <input name='ciudad' [(ngModel)]='nuevo.ciudad' required /></label>
         <button type='submit'>Crear</button>
       </form>
 
