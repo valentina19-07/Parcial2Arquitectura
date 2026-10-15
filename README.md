@@ -4,6 +4,18 @@ Microfrontends (Angular + federation) integrados por un host, cada uno conectado
 
 Integrantes: Valentina Gonzalez Mejia y Juan Fernando Vargas.
 
+## Arquitectura
+
+```mermaid
+flowchart LR
+  H[Host 4200] --> P[mfe-productos 4201]
+  H --> C[mfe-clientes 4202]
+  H --> D[mfe-pedidos 4203]
+  P --> MP[ms-productos 3001 Node]
+  C --> MC[ms-clientes 8082 Spring]
+  D --> MD[ms-pedidos 3003 Node]
+```
+
 ## Qué microservicio consume cada microfrontend
 
 | Microfrontend | Puerto | Microservicio | Tecnología | Puerto | URL consumida |
