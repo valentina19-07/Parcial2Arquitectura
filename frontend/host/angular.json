@@ -79,7 +79,12 @@
 						"inlineStyleLanguage": "scss",
 						"assets": [
 							"src/favicon.ico",
-							"src/assets"
+							"src/assets",
+							{
+								"glob": "federation.manifest.json",
+								"input": "src/assets",
+								"output": "/"
+							}
 						],
 						"styles": [
 							"src/styles.scss"
