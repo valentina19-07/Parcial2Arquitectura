@@ -1,0 +1,14 @@
+{
+  "name": "ms-productos",
+  "version": "1.0.0",
+  "description": "Microservicio de productos con Clean Architecture",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
