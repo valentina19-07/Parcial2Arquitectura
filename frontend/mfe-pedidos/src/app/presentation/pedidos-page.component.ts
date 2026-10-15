@@ -18,15 +18,15 @@ import { NuevoPedido, Pedido } from '../domain/models/pedido.model';
 
       <h3>Crear pedido</h3>
       <form class='form' (ngSubmit)='guardar()'>
-        <input name='clienteId' type='number' [(ngModel)]='nuevo.clienteId' placeholder='ID cliente' />
-        <input name='productoId' type='number' [(ngModel)]='nuevo.productoId' placeholder='ID producto' />
-        <input name='cantidad' type='number' [(ngModel)]='nuevo.cantidad' placeholder='Cantidad' />
+        <label>ID cliente <input name='clienteId' type='number' [(ngModel)]='nuevo.clienteId' /></label>
+        <label>ID producto <input name='productoId' type='number' [(ngModel)]='nuevo.productoId' /></label>
+        <label>Cantidad <input name='cantidad' type='number' [(ngModel)]='nuevo.cantidad' /></label>
         <button type='submit'>Crear</button>
       </form>
 
       <h3>Buscar por ID</h3>
       <div class='form'>
-        <input type='number' [(ngModel)]='idBusqueda' placeholder='ID' />
+        <label>ID <input type='number' [(ngModel)]='idBusqueda' /></label>
         <button type='button' (click)='buscar()'>Buscar</button>
       </div>
       @if (seleccionado) {
@@ -50,7 +50,8 @@ import { NuevoPedido, Pedido } from '../domain/models/pedido.model';
   `,
   styles: [`
     .page { max-width: 760px; margin: 1.5rem auto; padding: 0 1rem; font-family: sans-serif; }
-    .form { display: flex; gap: .5rem; margin-bottom: 1rem; }
+    .form { display: flex; gap: .5rem; margin-bottom: 1rem; align-items: flex-end; }
+    .form label { display: flex; flex-direction: column; font-size: .85rem; gap: .2rem; }
     table { width: 100%; border-collapse: collapse; }
     th, td { border: 1px solid #ddd; padding: .4rem; text-align: left; }
     .error { color: #b00020; }
